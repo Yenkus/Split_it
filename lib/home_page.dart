@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:split_it/page2.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -24,8 +27,13 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Expanded(
-                child: Container(
-                  child: Text('Start'),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/secondPage');
+                  },
+                  child: Container(
+                    child: Text('Start'),
+                  ),
                 ),
               ),
             ],
